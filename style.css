@@ -231,7 +231,7 @@ body {
     100% {transform: rotate(0deg) scale(1) translate(0,0);}
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
     .sward_wrapper {
         margin: 0 auto;
         width: 330px;
@@ -306,7 +306,7 @@ body {
     .container:hover .third_sward {
         box-shadow: 0 0 20px green ;
         background-color: green ;
-        transform: translateY(-55px) rotate(-45deg);
+        transform: translateY(-50px) rotate(-45deg);
     }
     
     .cradle_wrapper {
