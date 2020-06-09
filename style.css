@@ -1,0 +1,232 @@
+body {
+    background-color: black;
+ 
+    background-image:
+       -moz-radial-gradient(circle, #FFFFFF 2px, rgba(248,255,128,.5) 4px, transparent 40px),
+       -moz-radial-gradient(circle, #FFFFFF 1px, rgba(236, 50, 25, 0.4) 3px, transparent 30px),
+       -moz-radial-gradient(ellipse, rgba(255,255,255,.9) 1px, rgba(251,255,186,.3) 2px, transparent 40px),
+       -moz-radial-gradient(ellipse, rgba(255,255,255,.4), rgba(253,255,219,.2) 1px, transparent 30px);
+ 
+    background-image:
+       -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 40, from(white), color-stop(0.1, rgba(248,255,128,.5)), to(transparent)),
+       -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 30, from(white), color-stop(0.1, rgba(255,186,170,.4)), to(transparent)),
+       -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 40, from(rgba(255,255,255,.9)), color-stop(0.05, rgba(251,255,186,.3)), to(transparent)),
+       -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 30, from(rgba(255,255,255,.4)), color-stop(0.03, rgba(253,255,219,.2)), to(transparent));
+  
+    background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
+    background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+ 
+    animation-name: movement;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+   
+    -webkit-animation-name: movement;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+ }
+
+ @keyframes movement
+ {
+    from {
+          background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+    }
+    to {
+          background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+    }
+ }
+ @-moz-keyframes movement
+ {
+    from {
+          background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+    }
+    to {
+          background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+    }
+ }
+ @-webkit-keyframes movement
+ {
+    from {
+          background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+    }
+    to {
+          background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+    }
+ }
+
+.sward_wrapper {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 0 40px white;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.container {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.first_sward, 
+.second_sward,
+.third_sward {
+    width: 350px;
+    height: 10px;
+    border-radius: 30%;
+    background-color: white;
+    opacity: .8;
+}
+
+.first_sward::before {
+    position: relative;
+    left: 60px;
+    display: block;
+    content: " ";
+    width: 30px;
+    height: 10px;
+    background-color: #000000;
+}
+.third_sward::before {
+    position: relative;
+    left: 60px;
+    display: block;
+    content: " ";
+    width: 30px;
+    height: 10px;
+    background-color: #000000;
+}
+
+.second_sward::before {
+    position: relative;
+    left: 260px;
+    display: block;
+    content: " ";
+    width: 30px;
+    height: 10px;
+    background-color: #000000;
+}
+.container:hover .first_sward {
+    opacity: 0;
+}
+
+.second_sward,
+.third_sward { 
+    margin-top: 40px;
+    transition-duration: 1s;
+  }
+
+.container:hover .second_sward {
+    box-shadow: 0 0 40px red;
+    background-color: red;
+    transform: rotate(45deg);
+}
+
+.container:hover .third_sward {
+    box-shadow: 0 0 40px green ;
+    background-color: green ;
+    transform: translateY(-65px) rotate(-45deg);
+}
+
+
+.cradle_wrapper {
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 0 0 40px white;
+    border-radius: 25px;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newtoncradle {  
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    justify-content: center;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+.ball:first-child, .ball:last-child {
+    transform-origin: 21px -80px;
+}
+.ball:first-child {
+    animation: ball-left 1.2s ease infinite;
+}
+.ball:after {
+    position: relative;
+    display: block;
+    content: " ";
+    width: 100%;
+    height: 10px;
+    top: 80px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(236, 229, 229, 0.637) 0%,rgba(0,0,0,0) 100%);
+}
+
+
+
+.ball:first-child {
+    animation: ball-left 1s ease infinite;
+}
+
+.ball:first-child::after {
+    animation: shadow-left 1s ease infinite;
+}
+
+.ball:last-child {
+    animation: ball-right 1s ease infinite;
+}
+
+.ball:last-child::after {
+    animation: shadow-right 1s ease infinite;
+}
+
+@keyframes ball-left {
+    0%   { transform: rotate(0deg); }
+   25%   { transform: rotate(12deg); }
+   50% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+@keyframes ball-right {
+    0%   { transform: rotate(0deg); }
+   50%   { transform: rotate(0deg); }
+   75%   { transform: rotate(-12deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes shadow-left {
+          0% {transform: rotate(0deg) scale(1) translate(0,0);}
+         25% {transform: rotate(-12deg) scale(1.2) translate(-5px,5px)}
+         50% {transform: rotate(0deg) scale(1) translate(0,0);}
+        100% {transform: rotate(0deg) scale(1) translate(0,0);}
+}
+    
+@keyframes shadow-right {
+      0% {transform: rotate(0deg) scale(1) translate(0,0);}
+     50% {transform: rotate(0deg) scale(1) translate(0,0);}
+     75% {transform: rotate(12deg) scale(1.2) translate(-5px,5px);}
+    100% {transform: rotate(0deg) scale(1) translate(0,0);}
+}
