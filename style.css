@@ -230,3 +230,109 @@ body {
      75% {transform: rotate(12deg) scale(1.2) translate(-5px,5px);}
     100% {transform: rotate(0deg) scale(1) translate(0,0);}
 }
+
+@media (max-width: 360px) {
+    .sward_wrapper {
+        margin: 0 auto;
+        width: 330px;
+        height: 330px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .container {
+        height: 70px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    
+    
+    }
+    
+    .first_sward, 
+    .second_sward,
+    .third_sward {
+        width: 250px;
+        height: 7px;
+        border-radius: 30%;
+        background-color: white;
+    }
+    
+    .first_sward::before {
+        position: relative;
+        left: 30px;
+        display: block;
+        content: " ";
+        width: 20px;
+        height: 7px;
+        background-color: #000000;
+    }
+    .third_sward::before {
+        position: relative;
+        left: 30px;
+        display: block;
+        content: " ";
+        width: 20px;
+        height: 7px;
+        background-color: #000000;
+    }
+    
+    .second_sward::before {
+        position: relative;
+        left: 190px;
+        display: block;
+        content: " ";
+        width: 20px;
+        height: 7px;
+        background-color: #000000;
+    }
+    .container:hover .first_sward {
+      opacity: 0;
+    }
+    
+    .second_sward,
+    .third_sward { 
+        margin-top: 40px;
+        transition-duration: 1s;
+      }
+    
+    .container:hover .second_sward {
+        box-shadow: 0 0 20px red;
+        background-color: red;
+        transform: rotate(45deg);
+    }
+    
+    .container:hover .third_sward {
+        box-shadow: 0 0 20px green ;
+        background-color: green ;
+        transform: translateY(-55px) rotate(-45deg);
+    }
+    
+    .cradle_wrapper {
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        box-shadow: 0 0 40px white;
+        border-radius: 25px;
+        width: 330px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .newtoncradle {  
+        display: flex;
+        align-items: center;
+        width: 300px;
+        height: 200px;
+        justify-content: center;
+    }
+    
+    .ball {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+} 
